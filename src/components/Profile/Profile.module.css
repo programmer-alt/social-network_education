@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    height: 100%;
+  }
+  
+.content img {
+    width: 1000px;
+    height: 200px;
+  }
+  .item {
+    color: darkorange;
+  }
