@@ -4,12 +4,17 @@
   margin: 0 auto;
   width: 1200px;
   grid-template-areas:
-    "h h"       /* header занимает 2 строки ,  n-navbar занимает 1 колонку левую и с-contenat занимает правую колонку  */
+    "h h"       /* header занимает 2 строки ,  n-navbar занимает 1 колонку левую и с-content занимает правую колонку  */
     "n c";
   grid-template-rows: 60px 1fr ;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
 
-
+.app-wrapper-content {
+  .content {
+    grid-area: c;
+    height: 100%;
+  }
+}
 

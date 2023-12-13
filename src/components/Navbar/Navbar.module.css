@@ -1,13 +1,20 @@
+
 .nav {
-    grid-area: n;
-    background-color: chocolate;
-  }
-.item {
-    color:beige;
-}  
-.item.active {
-  color: saddlebrown;
+  grid-area: n;
+  background-color: chocolate; 
+  padding: 20px;
+  
 }
-/* в Navbar добавляем module, чтобы к примеру есть общий класс item у Navbar и Profile, код item написанный
-в Navbar действует только для Navbar /не смотря что item есть и в других компонента. для этого в Navbar.jsx
-вместо item будет указываться className= {s.item} потому что import s from..... */
+
+.item a.activeLink {
+  color: gold;
+ 
+}
+
+
+
+.item a {
+  color: beige;
+  text-decoration: none;
+}
+

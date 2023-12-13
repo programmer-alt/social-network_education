@@ -1,0 +1,9 @@
+.item {
+  color: darkorange;
+}
+
+.item img {
+  width: 50px;
+  height: min-content;
+  border-radius: 30px;
+}
