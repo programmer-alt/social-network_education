@@ -27,8 +27,10 @@ let state = {
                 { id: 5, name: 'Victor' },
                 { id: 6, name: 'Valera' }
               ]
+    },
+    sidebar: {
+        sidebarData: []
     }
-   
   }
-
+ state.sidebar.sidebarData = state.dialogsPage.dialogs.slice(0,3)
 export default state
