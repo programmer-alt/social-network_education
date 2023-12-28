@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import News from './components/News';
 // import Music from './components/Music';
 // import Setting from './components/Setting';
-
+import Friends from './components/Navbar/FriendsSidebar/Friends';
 
 
 function App(props) {
@@ -24,6 +24,7 @@ function App(props) {
           <Routes>
             <Route path='/profile' element={<Profile state={props.state.profilePage} />} />
             <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
+            <Route path='/friends' element={<Friends state={props.state.sidebar} />} />
            
           </Routes>
         </div>
