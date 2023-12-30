@@ -29,8 +29,15 @@ let state = {
               ]
     },
     sidebar: {
-        sidebarData: []
+    
     }
   }
- state.sidebar.sidebarData = state.dialogsPage.dialogs.slice(0,3)
+ export let addPost = (PostMessage) => {
+    let newPost = {
+        id: 5,
+        message: PostMessage,
+        likesCount : 0
+    }
+    state.profilePage.posts.push(newPost) 
+}
 export default state
