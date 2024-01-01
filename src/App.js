@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Friends from './components/Navbar/FriendsSidebar/Friends';
 
 
+
 function App(props) {
   
  
@@ -22,7 +23,10 @@ function App(props) {
         {/* <Profile/> */}
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile state={props.state.profilePage} />} />
+            <Route path='/profile' element={<Profile 
+              profilePage={props.state.profilePage}
+              addPost={props.addPost}
+              updateAddPost={props.updateAddPost} />} />
             <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
             <Route path='/friends' element={<Friends state={props.state.sidebar} />} />
            
