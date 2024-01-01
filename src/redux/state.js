@@ -42,7 +42,7 @@ export let addPost = (PostMessage) => {
     state.profilePage.posts.push(newPost)
     rerenderEntireTree(state)
 }
-export let updateAddPost = (newText) => {
+export let updateNewPost = (newText) => {
    
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
