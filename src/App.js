@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { updateNewPost } from './redux/state';
 
 // import News from './components/News';
 // import Music from './components/Music';
@@ -23,7 +24,11 @@ function App(props) {
         {/* <Profile/> */}
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
+            <Route path='/profile' element={<Profile 
+              profilePage={props.state.profilePage} 
+              addPost={props.addPost} 
+              updateNewPost={props.updateNewPost}
+            />} />
             <Route path='/dialogs' element={<Dialogs state={props.state.dialogsPage} />} />
            
           </Routes>
