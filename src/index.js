@@ -1,5 +1,6 @@
 import state from "./redux/state"
-import rerenderEntireTree from "./render"
+import {rerenderEntireTree} from "./render"
+
 
 
 

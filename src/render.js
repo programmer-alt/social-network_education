@@ -1,16 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import './index.css';
 import App from './App';
-import { updateAddPost, addPost} from './redux/state';
+import { updateNewPost, addPost } from './redux/state';
 
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
 
-const rerenderEntireTree = (state) => {
- ReactDOM.render(
-   <React.StrictMode>
-     <App state={state} addPost={addPost} updateAddPost={updateAddPost}/>
-   </React.StrictMode>,
-   document.getElementById('root')
- )
-}
-export default rerenderEntireTree
+export const rerenderEntireTree = (state) => {
+  root.render(
+    <React.StrictMode>
+      <App state={state} addPost={addPost} updateNewPost={updateNewPost} />
+    </React.StrictMode>
+  );
+};
+
+export default rerenderEntireTree;
