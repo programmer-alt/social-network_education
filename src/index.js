@@ -1,4 +1,4 @@
-import state from './redux/state';
+import state, { subcribe } from './redux/state';
 import React from 'react';
 import './index.css';
 import App from './App';
@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client';
 const domNode = document.getElementById('root');
 const root = createRoot(domNode)
 
-const rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
   root.render(
     <React.StrictMode>
       
@@ -18,7 +18,5 @@ const rerenderEntireTree = (state) => {
     
   );
 };
-
-export default rerenderEntireTree
-
 rerenderEntireTree(state);
+subcribe(rerenderEntireTree )
