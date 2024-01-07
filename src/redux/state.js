@@ -34,13 +34,14 @@ let state = {
     
     }
   }
- export let addPost = (PostMessage) => {
+ export let addPost = () => {
     let newPost = {
         id: 5,
-        message: PostMessage,
+        message: state.profilePage.newPostText,
         likesCount : 0
     }
     state.profilePage.posts.push(newPost)
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state) 
 }
 export let updateNewPost = (newText) => {

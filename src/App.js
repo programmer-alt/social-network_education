@@ -5,7 +5,6 @@ import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { updateNewPost } from './redux/state';
 
 // import News from './components/News';
 // import Music from './components/Music';
